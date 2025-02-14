@@ -12,7 +12,8 @@ footer {
   text-align: right;
   font-weight: bold;
   padding: 20px;
-  width: 300px;
+  margin:20px;
+  width: 250px;
 }
 h1 {
   color:blue;
