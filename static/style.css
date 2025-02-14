@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(217, 208, 220);
+}
+div {
+  border-style: double;
+  border-color: rgb(0, 30, 255);
+  padding:20px;
+  margin: 20px;
+}
+footer {
+  background-color: #ff8c82;
+  text-align: right;
+  font-weight: bold;
+  padding: 20px;
+  width: 300px;
+}
+h1 {
+  color:blue;
+  text-align:center;
+  font-size:250%;
+  }
