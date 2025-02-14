@@ -20,3 +20,14 @@ h1 {
   text-align:center;
   font-size:250%;
   }
+.container {
+  display: flex;
+}
+
+#block1, #block2 {
+  flex: 1;
+  margin: 2px;
+  border: 1px solid gray;
+  padding: 10px;
+  background: lightgray;
+}
