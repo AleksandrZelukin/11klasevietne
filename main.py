@@ -15,7 +15,7 @@ db.commit()
 sql.close()
 db.close()
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
     return render_template("index.html")
 
