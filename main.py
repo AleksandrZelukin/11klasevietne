@@ -1,9 +1,21 @@
-from flask import Flask,url_for, render_template,request
-
+from flask import Flask, request, render_template, redirect,flash,url_for
+import sqlite3
+from werkzeug.security import check_password_hash, generate_password_hash
 app = Flask(__name__)
 
+db = sqlite3.connect('login_password.db')
+sql = db.cursor()
 
-@app.route('/')
+sql.execute('''CREATE TABLE IF NOT EXISTS passwords(
+id_user INTEGER PRIMARY KEY AUTOINCREMENT,
+login TEXT,
+parole TEXT);''')
+
+db.commit()
+sql.close()
+db.close()
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
