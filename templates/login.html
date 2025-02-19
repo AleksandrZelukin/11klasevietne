@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
+{% block head %}
+<link href="static/login.css"rel="stylesheet">
+{%endblock%}
 
 {% block content %}
-
-<div class="login">
-  <div class="login-triangle"></div>
-  
-  <h2 class="login-header">Log in</h2>
-
-  <form class="login-container">
-    <p><input type="email" placeholder="Email"></p>
-    <p><input type="password" placeholder="Password"></p>
-    <p><input type="submit" value="Log in"></p>
-  </form>
-</div>
-
-<div class="container">
-  <div id="block1"><a href="/">atpakaļ </a></div>
-  <div id="block2"><a href="/noteikumi"> uz priekšu</a></div>
+<div class="vid-container">
+  <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop>
+      <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
+  </video>
+  <div class="inner-container">
+    <video id="Video2" class="bgvid inner" autoplay="false" muted="muted" preload="auto" loop>
+      <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="box">
+      <h1>Login</h1>
+      <input type="text" placeholder="Username"/>
+      <input type="text" placeholder="Password"/>
+      <button>Login</button>
+      <p>Not a member? <span>Sign Up</span></p>
+    </div>
+  </div>
 </div>
 {% endblock %}

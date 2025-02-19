@@ -1,16 +1,19 @@
 <DOCTYPE html>
 <html>
 <head>
+{% block head %}
 <link href="static/style.css"rel="stylesheet">
+{% endblock %}
+
 </head>
 <body>
     <nav class="two">
         <ul>
-          <!-- <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li> -->
           <li><a href="/hello">kontakt</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="/login">Log in</a></li>
         </ul>
       </nav>
 {% block content %}
