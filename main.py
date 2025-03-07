@@ -27,9 +27,18 @@ def hello():
 def noteikumi():
     return render_template("noteikumi.html")
 
-@app.route('/login')
-def login():
-    return render_template("login.html")
+@app.route('/login', methods=['GET', 'POST'])
+def autorizacija():
+    if request.method == 'POST':
+        login = request.form.get('login')
+        parole = request.form.get('parole')
+        db = sqlite3.connect('login_password.db')
+        sql = db.cursor()
+        info = sql.execute(("""SELECT login from passwords WHERE login = '{}'""").format(login)).fetchone()
+        if info in None:
+            return "Password nekorekts!"
+# def login():
+#     return render_template("login.html")
 
 
 if __name__ == '__main__':
